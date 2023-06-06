@@ -49,7 +49,7 @@ list.style.color='red';
 var list1=document.querySelector(".l1:last-child");
 list1.style.color='green';
 var list1=document.querySelector(".l1:nth-child(2");
-list1.style.color='yellow';
+list1.style.color='white';
 
 //QUERYSELECTORALL
 var titles=document.querySelectorAll("title");
