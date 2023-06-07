@@ -44,9 +44,13 @@
 // container.insertBefore(div,h1);
 // console.log(div);
 
+
+
  var form=document.getElementById("addForm");
  var ul=document.getElementById("items");
  var filter=document.getElementById("filter");
+
+  
 //to perform action
 form.addEventListener("submit",create);
 //to perform delete action
@@ -59,13 +63,19 @@ ul.addEventListener("click",removeItems);
     c.preventDefault();
     
     //to get element by input
-    var input=document.getElementById("item").value;
+   var input1=document.getElementById("item1").value;
+   var input2=document.getElementById("item2").value;
+
 
     //to create new list to get input from after submit that will display into list
         var li=document.createElement("li");
         li.className="list-group-item";
-        li.appendChild(document.createTextNode(input));
+        // li.textContent=input1+" "+input2;
+        li.appendChild(document.createTextNode(input1+" "+input2));
         ul.appendChild(li);
+        //local storage
+        // localStorage.setItem("item_name",li.textContent);
+        console.log(localStorage.getItem("item_name"));
     //to add delete button
         var deleteButton=document.createElement("Button");
         deleteButton.className="btn btn-danger btn-sm float-right delete";
@@ -106,6 +116,7 @@ function filterFunction(c){
         }
     })
 }
+
 
  
 
