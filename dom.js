@@ -74,8 +74,8 @@ ul.addEventListener("click",removeItems);
         li.appendChild(document.createTextNode(input1+" "+input2));
         ul.appendChild(li);
         //local storage
-        // localStorage.setItem("item_name",li.textContent);
-        console.log(localStorage.getItem("item_name"));
+         localStorage.setItem("item_name",li.textContent);
+        // console.log(localStorage.getItem("item_name"));
     //to add delete button
         var deleteButton=document.createElement("Button");
         deleteButton.className="btn btn-danger btn-sm float-right delete";

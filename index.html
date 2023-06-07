@@ -28,8 +28,17 @@
     <input type="text" id="searchInput" placeholder="Search...">
 <ul id="itemList"></ul>
 
-    <script src="index.js">
-         
+    <script type="text/javaccript">
+        let item={
+            name:"john",
+            age:22
+        };
+        let itemStore_serialise=JSON.Stringify("item");
+        localStorage.setItem("information",itemStore_serialise);
+
+        
+         var item_deserialise=JSON.parse(localStorage.getItem("item"));
+         console.log(item_deserialise);
     </script>
 </body>
 </html>
